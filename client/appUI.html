@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="client/css/styleAppUI.css">
+    </head>
+
+    <body>
+        <div class="contAllFiles" name="contAllFiles"></div>
+        <div class="uploadProgress" name="uploadProgress">
+            <p class="uploadProgressText" name="uploadProgressText">50MB / 100MB</p>
+            <progress class="uploadProgressBar" name="uploadProgressBar" value="0" max="100"></progress>
+        </div>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="client/script/script.js"></script>
+    <script src="client/script/buttonHandler.js"></script>
+    <script src="client/script/eventHandler.js"></script>
+</html>

@@ -1,0 +1,102 @@
+/* Hide ugly scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #202124;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contAllFiles {
+    width: 40vw;
+    height: 80vh;
+    padding-top: 2vh;
+    overflow: scroll;
+    border: 2px solid black;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contFile {
+    width: 80%;
+    min-height: 10%;
+    margin-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(48,49,52,1) 0%, rgba(32,33,36,1) 100%);
+    border-radius: 6px;
+    transition: transform 0.8s;
+    display: flex;
+    align-items: center;
+}
+.contFile:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.contFileName {
+    width: 60%;
+    height: 80%;
+    color: #CCCCCC;
+    font-size: 28px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.contFileSize {
+    width: 30%;
+    height: 80%;
+    margin-left: 6%;
+    color: #E0E8F0;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uploadProgress {
+    width: 25%;
+    height: 12%;
+    left: 2%;
+    bottom: 10%;
+    position: fixed;
+    background: #303134;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.uploadProgressText {
+    color: #00CC00;
+    font-size: 20px;
+}
+
+.uploadProgressBar {
+    width: 80%;
+    height: 20px;
+    background-color: #f0f0f0;
+}
+  
+.uploadProgressBar::-webkit-progress-bar {
+    background-color: #f0f0f0;
+}
+
+.uploadProgressBar::-webkit-progress-value {
+    background-color: #4CAF50;
+}
+
+.uploadProgressBar::-moz-progress-bar {
+    background-color: #4CAF50;
+}
