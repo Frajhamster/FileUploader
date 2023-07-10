@@ -1,7 +1,8 @@
 // Server setup variables
 const password = '123';
 const port = 4320;
-const publicIp = 'http://212.85.190.107:' + port;
+const publicIp = 0.0.0.0;
+const serverUrl = 'http://' + publicIp + ':' + port;
 
 const clientFolderName = '/client';
 const hostingFolderName = '/_hostingfolder';
@@ -55,7 +56,7 @@ function requestAllFilesDataListener(socket) {
 
 function downloadFileListener(socket) {
 	socket.on('downloadFile', function(data) {
-		let fileLink = publicIp + hostingFolderName + '/' + data.fileName;
+		let fileLink = serverUrl + hostingFolderName + '/' + data.fileName;
 		socket.emit('returnFileLink', {
 			fileName: data.fileName,
 			fileLink: fileLink
